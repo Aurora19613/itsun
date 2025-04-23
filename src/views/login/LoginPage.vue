@@ -58,7 +58,7 @@ watch(isRegister,() => {
     repassword: ''
   }
 })
-const login = async() => {
+const login = async () => {
   await form.value.validate()
   const res = await userLoginService(formModel.value)
   const useUser = useUserStore()

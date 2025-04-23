@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-
+import { useUserStore } from '@/stores'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
@@ -18,5 +18,10 @@ const router = createRouter({
     }
   ],
 })
-
+router.beforeEach((to) => {
+  const useUser = useUserStore()
+  if(!useUser.token && to.path !== '/login') {
+    return '/login'
+  }
+})
 export default router

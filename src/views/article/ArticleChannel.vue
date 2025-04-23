@@ -1,6 +1,6 @@
 <script setup>
 </script>
 <template>
-    频道管理
+    频道
 </template>
 <style></style>
