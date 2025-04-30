@@ -14,7 +14,7 @@ export const useUserStore = defineStore(
     }
     const removeToken = () => token.value = ''
     const setInfo = (obj) => user.value = obj
-    return { 
+    return {
       token, 
       setToken, 
       user, 

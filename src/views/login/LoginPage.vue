@@ -6,7 +6,7 @@ import { ElMessage } from 'element-plus'
 import router from '@/router'
 import { useUserStore } from '@/stores'
 
-const isRegister = ref(true)
+const isRegister = ref(false)
 //定义属性 接收表单中的值 在ElEMent-plus中，表单必须要绑定了四个值(:model :rules v-model prop)才能输入值
 const formModel = ref({
     username: '',
@@ -63,10 +63,13 @@ const login = async () => {
   const res = await userLoginService(formModel.value)
   const useUser = useUserStore()
   useUser.setToken(res.data.token)
-  ElMessage.success('登陆成功')
+  ElMessage({
+    message: '登陆成功',
+    type: 'success',
+  })
   setTimeout(() => {
     router.push('/')
-  }, 1500);
+  }, 1500)
 }
 </script>
 <template>  

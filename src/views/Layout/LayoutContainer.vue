@@ -88,7 +88,7 @@ const onCommand = async (command) => {
     </el-aside>
     <el-container>
       <el-header>
-        <div>黑马程序员：<strong>{{ useUser.user.nickname || useUser.user.username }}</strong></div>
+        <div>亲爱的程序员：<strong>{{ useUser.user.nickname || useUser.user.username }}</strong></div>
         <!--
         el-dropdown 是展示给用户看的 相当于首页
         @command 相当于点击事件

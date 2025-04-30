@@ -17,20 +17,20 @@ export default defineConfig({
     }),
     Components({
       resolvers: [ElementPlusResolver()]
-    }),
+    })
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  //让css样式
-  build: {
-    cssCodeSplit: true, //强制拆分css样式 vite会自动将CSS内联到js中    
-    rollupOptions:{
-      output:{
-        assetFileNames: 'assets/[name].[hash].[ext]'
-      }
-    }
-  }
+  // 让css样式    
+  // build: {
+  //   cssCodeSplit: true, //强制拆分css样式 vite会自动将CSS内联到js中    
+  //   rollupOptions:{
+  //     output:{
+  //       assetFileNames: 'assets/[name].[hash].[ext]'
+  //     }
+  //   }
+  // }
 })

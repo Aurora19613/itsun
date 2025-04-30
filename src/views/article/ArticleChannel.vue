@@ -81,5 +81,4 @@ const onSuccess = () => {
        </el-table>
        <ChannlEdit ref="dialog" @onSuccess="onSuccess"></ChannlEdit>
     </page-container>
-    
 </template>

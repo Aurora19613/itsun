@@ -19,6 +19,9 @@ const rules = {
     { pattern: /^[a-zA-Z0-9]{1,15}$/, message: '分类别名必须是1-15位的字母数字', trigger: 'blur'}
     ]
 }
+//组件对外暴露一个open方法，基于open传来的参数，区分是添加还是编辑
+//open({}) => {} 表单无需渲染 则说明是添加
+//open({id, cate_id...}) => {} 表单需要渲染 则说明是编辑
 const open = (obj) => {
     dialogFormVisible.value = true
     formModel.value = {...obj}
