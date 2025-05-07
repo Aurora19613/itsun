@@ -13,7 +13,6 @@ const dialog = ref()
 const getChannelData = async () => {
     loading.value = true 
     const res = await articleGetChannelInfoService()
-    console.log(res.data.data);
     dataList.value = res.data.data
     loading.value = false
 }

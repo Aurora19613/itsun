@@ -123,7 +123,11 @@ const onCommand = async (command) => {
         </el-dropdown>
       </el-header>
       <el-main>
-        <router-view></router-view>
+        <router-view v-slot="{ Component }">
+          <transition name="slide-fade" mode="out-in">
+            <component :is="Component" />
+          </transition>
+        </router-view>
       </el-main>
       <el-footer>大事件 ©2025 Created by 方旭</el-footer>
     </el-container>
@@ -169,5 +173,22 @@ const onCommand = async (command) => {
     font-size: 14px;
     color: #666;
   }
+}
+.slide-fade-enter-active {
+  transition: all 0.2s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.2s ease-in;
+}
+
+.slide-fade-enter-from {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
 }
 </style>

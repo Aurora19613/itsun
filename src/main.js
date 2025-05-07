@@ -5,6 +5,8 @@ import App from './App.vue'
 import router from './router'
 import { QuillEditor } from '@vueup/vue-quill'   
 import '@vueup/vue-quill/dist/vue-quill.snow.css'
+import 'element-plus/es/components/message/style/css'
+import 'element-plus/es/components/message-box/style/css'
 // import '../dist/assets/index-C5WyVui3.css' //引入了Element的样式 不然ElMessage按钮没有样式
 // import 'element-plus/dist/index.css'
 const app = createApp(App)

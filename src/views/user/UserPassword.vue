@@ -51,12 +51,18 @@ const onSubmit = async () => {
       router.push('/login')
     }
 }
-const onReset = () => {}
+const onReset = () => {
+  pwdForm.value = {
+    old_pwd: '',
+    new_pwd: '',
+    re_pwd: ''
+}
+}
 </script>
 <template>
     <PageContainer title="重置密码">
-        <el-row>
-      <el-col :span="12">
+      <el-row>
+        <el-col :span="12">
         <el-form
           :model="pwdForm"
           :rules="rules"
@@ -82,7 +88,7 @@ const onReset = () => {}
             <el-button @click="onReset">重置</el-button>
           </el-form-item>
         </el-form>
-      </el-col>
+    </el-col>
     </el-row>
     </PageContainer>
 </template>
